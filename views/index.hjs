@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BROTHER!</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/master.css">
+  </head>
+  <body>
+    <a href="/login" id=''>Login</a>
+    <div class="container">
+      <h1>{{name}} got a ringside seat to their own smackdown, BROTHER!</h1>
+      <ol>
+        <!--Basically a for loop in HOGAN TE  -->
+        {{#profiles}}
+        <li>
+          {{name}}
+          {{#job}}
+            the {{job}},
+          {{/job}} Just got BOUNCED!
+          {{#food}}
+           <br>BTW, their favorite snack was {{food}}!
+          {{/food}}
+        </li>
+        {{/profiles}}
+      </ol>
+
+    </div>
+    <div class="container" id="add-profile">
+      <!-- When Submitted, send req to /join in rout handler. note that action = /join -->
+      <form class="" action="/join" method="post">
+        <input type="text" name="username" value="" placeholder='username' required><br>
+        <input type="password" name="password" value="" placeholder='password' required><br>
+        <input type="text" name="food" value="" placeholder='Favorite Snack'><br>
+        <input type="submit" name="" value="Join">
+      </form>
+    </div>
+
+  </body>
+  <script src="/js/bootstrap.min.js" charset="utf-8"></script>
+</html>
