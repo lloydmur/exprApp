@@ -14,7 +14,7 @@
         <!--Basically a for loop in HOGAN TE  -->
         {{#profiles}}
         <li>
-          {{name}}
+          {{username}}
           {{#job}}
             the {{job}},
           {{/job}} Just got BOUNCED!

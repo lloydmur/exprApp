@@ -13,17 +13,17 @@ const userSchema = new mongoose.Schema({
 const User = new mongoose.model('User', userSchema);
 
 const router = express.Router();
-var profiles = [
-  {name: 'Kim Jong Il', job: 'God Amongst Men'},
-  {name: 'Kim Jong Un', job: 'Savior'},
-  {name: 'Donkey Kong', job: 'Messiah'},
-  {name: 'Llyod'},
-]
+var profiles;
+User.find({}, (err, data) => {
+	if(err) throw err;
+	profiles = data;
+	console.log(profiles);
+});
 
 router.get('/', (req, res, next) =>{
   const data = {
     profiles: profiles,
-    name: profiles[0].name
+    name: profiles[0].username
   }
   res.render('index', data);
 });
@@ -48,7 +48,7 @@ router.post('/login', (req, res, next) =>{
 })
 router.post('/join', (req, res, next) => {
   let item = {
-    name: req.body.username,
+    username: req.body.username,
     job: req.body.password,
     food: req.body.food
   };
