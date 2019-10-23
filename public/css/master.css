@@ -1,6 +1,9 @@
-h1{
-  color: Red;
+.item{
+  padding: 12px;
+  background: #f9f9f9;
+  border: 1px solid black;
+  margin-bottom: 16px;
+  text-align: center;
 }
-body{
-  background: linear-gradient(90deg, bisque, white, coral);
+.item button{
 }

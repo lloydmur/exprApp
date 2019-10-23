@@ -1,18 +1,23 @@
 {
-  "name": "expr",
+  "name": "wapp",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "npx nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
     "hjs": "0.0.6",
-    "moment": "^2.24.0",
-    "mongoose": "^5.7.1"
+    "mailgun-js": "^0.22.0",
+    "mongoose": "^5.7.5",
+    "nodemon": "^1.19.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
   }
 }

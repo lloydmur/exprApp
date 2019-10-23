@@ -2,15 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/master.css">
+    <title>Welcome to this WebApp</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Error</h1>
-      <p>Ivalid login</p><br>
-      <a href="/login">Go back</a>
-    </div>
+    <p>{{message}}</p>
   </body>
 </html>
